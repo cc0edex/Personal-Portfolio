@@ -5,7 +5,9 @@ import CategoryBadge from "@/components/category-badge";
 import BlogModel from "@/lib/config/models/BlogModel";
 import { unstable_cache } from "next/cache";
 import { notFound } from "next/navigation";
+import { ConnectDb } from "@/lib/config/db";
 import { createDynamicMetadata } from "@/lib/metadata";
+ConnectDb();
 export async function generateMetadata({
   params,
 }: {
