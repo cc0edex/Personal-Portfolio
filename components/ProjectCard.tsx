@@ -47,15 +47,16 @@ export default function ProjectCard({
           ))}
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex space-x-2 w-full">
           <button className="bg-indigo-600 text-sm font-medium ring-offset-background rounded-sm px-4 h-10 py-2 hover:bg-indigo-700 text-white">
             <a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center"
+              className="flex items-center gap-2"
             >
-              <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+              <ExternalLink className="h-4 w-4" />{" "}
+              <span className="w-full text-[11px] lg:text-base">Live Demo</span>
             </a>
           </button>
           <button className="border-2 border-indigo-600 text-sm bg-violet-50 font-medium ring-offset-background rounded-sm px-4 h-10 py-2 text-indigo-600 hover:bg-indigo-100 dark:border-indigo-400 dark:bg-transparent dark:text-indigo-400 dark:hover:bg-slate-800">
@@ -65,7 +66,10 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="flex items-center"
             >
-              <Github className="mr-2 h-4 w-4" /> Source Code
+              <Github className="mr-2 h-4 w-4" />{" "}
+              <span className="w-full text-[11px] lg:text-base">
+                Source Code
+              </span>
             </a>
           </button>
         </div>
